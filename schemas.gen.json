@@ -90,14 +90,27 @@
               "$live/sections/PageInclude.tsx",
               "$live/sections/Slot.tsx",
               "$live/sections/UseSlot.tsx",
+              "deco-sites/std/sections/Analytics.tsx",
+              "deco-sites/std/sections/configButterCMS.global.tsx",
+              "deco-sites/std/sections/configNuvemShop.tsx",
+              "deco-sites/std/sections/configOCC.global.tsx",
+              "deco-sites/std/sections/configShopify.global.tsx",
+              "deco-sites/std/sections/configVTEX.global.tsx",
+              "deco-sites/std/sections/configYourViews.global.tsx",
+              "deco-sites/std/sections/SEO.tsx",
+              "deco-sites/std/sections/SEOPDP.tsx",
+              "deco-sites/std/sections/SEOPLP.tsx",
+              "deco-sites/std/sections/VTEXPortalDataLayerCompatibility.tsx",
               "deco-sites/treinamentohard/sections/Category/CategoryBanner.tsx",
               "deco-sites/treinamentohard/sections/Category/CategoryList.tsx",
               "deco-sites/treinamentohard/sections/Content/Benefits.tsx",
+              "deco-sites/treinamentohard/sections/Content/CardSection.tsx",
               "deco-sites/treinamentohard/sections/Content/Faq.tsx",
               "deco-sites/treinamentohard/sections/Content/Logos.tsx",
               "deco-sites/treinamentohard/sections/Content/Testimonials.tsx",
               "deco-sites/treinamentohard/sections/Footer/Footer.tsx",
               "deco-sites/treinamentohard/sections/Header/Header.tsx",
+              "deco-sites/treinamentohard/sections/Header/SubHeader.tsx",
               "deco-sites/treinamentohard/sections/Images/BannerGrid.tsx",
               "deco-sites/treinamentohard/sections/Images/Carousel.tsx",
               "deco-sites/treinamentohard/sections/Images/ImageGallery.tsx",
@@ -114,17 +127,6 @@
               "deco-sites/treinamentohard/sections/Social/InstagramPosts.tsx",
               "deco-sites/treinamentohard/sections/Social/WhatsApp.tsx",
               "deco-sites/treinamentohard/sections/Theme/Theme.tsx",
-              "deco-sites/std/sections/Analytics.tsx",
-              "deco-sites/std/sections/configButterCMS.global.tsx",
-              "deco-sites/std/sections/configNuvemShop.tsx",
-              "deco-sites/std/sections/configOCC.global.tsx",
-              "deco-sites/std/sections/configShopify.global.tsx",
-              "deco-sites/std/sections/configVTEX.global.tsx",
-              "deco-sites/std/sections/configYourViews.global.tsx",
-              "deco-sites/std/sections/SEO.tsx",
-              "deco-sites/std/sections/SEOPDP.tsx",
-              "deco-sites/std/sections/SEOPLP.tsx",
-              "deco-sites/std/sections/VTEXPortalDataLayerCompatibility.tsx",
               "$live/matchers/MatchAlways.ts",
               "$live/matchers/MatchCron.ts",
               "$live/matchers/MatchDate.ts",
@@ -7824,10 +7826,319 @@
       ],
       "title": "deco-cx/deco/sections/UseSlot.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9BbmFseXRpY3MudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "trackingIds": {
+          "type": "array",
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "description": "google tag manager container id. For more info: https://developers.google.com/tag-platform/tag-manager/web#standard_web_page_installation .",
+          "title": "Tracking Ids"
+        },
+        "googleAnalyticsIds": {
+          "type": "array",
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "title": "GA Measurement Ids",
+          "label": "measurement id",
+          "description": "the google analytics property measurement id. For more info: https://support.google.com/analytics/answer/9539598"
+        },
+        "src": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "custom url for serving google tag manager. Set either this url or the tracking id",
+          "title": "Src"
+        },
+        "dangerouslyRunOnMainThread": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "run GTM directly on the main thread, without Partytown. This is useful for debugging purposes. Default: false",
+          "title": "Dangerously Run On Main Thread"
+        }
+      },
+      "required": [],
+      "title": "deco-sites/std/components/Analytics.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL2NsaWVudC50cw==@Locale": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "title": "Locale"
+        },
+        "authToken": {
+          "type": "string",
+          "title": "Auth Token"
+        }
+      },
+      "required": [
+        "label",
+        "authToken"
+      ],
+      "title": "Locale"
+    },
+    "ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL2NsaWVudC50cw==@Locale[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL2NsaWVudC50cw==@Locale"
+      },
+      "title": "Locale[]"
+    },
+    "ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL2NsaWVudC50cw==@ConfigButterCMS": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9kZWNvL2Jsb2Nrcy9hY2NvdW50LnRz@Account"
+        }
+      ],
+      "properties": {
+        "locales": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL2NsaWVudC50cw==@Locale[]",
+          "title": "Locales"
+        },
+        "defaultLocale": {
+          "type": "string",
+          "description": "Default value: en-us",
+          "default": "en-us",
+          "title": "Default Locale"
+        },
+        "apiVersion": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Default value: v2",
+          "default": "v2",
+          "title": "Api Version"
+        }
+      },
+      "required": [
+        "locales",
+        "defaultLocale"
+      ],
+      "title": "deco-sites/std/commerce/butterCMS/client.ts@ConfigButterCMS"
+    },
     "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image": {
       "type": "string",
       "format": "image-uri",
       "title": "Image"
+    },
+    "ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@ProductDetailsPage|null|ProductListingPage|null": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@ProductDetailsPage|null"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@ProductListingPage|null"
+        }
+      ],
+      "title": "ProductDetailsPage|null|ProductListingPage|null"
+    },
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9zZW8vdHlwZXMudHM=@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Title"
+        },
+        "titleTemplate": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Title template",
+          "description": "add a %s whenever you want it to be replaced with the category name or search term",
+          "default": "%s | Deco.cx"
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Description"
+        },
+        "type": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "website",
+              "default": "website"
+            },
+            {
+              "type": "string",
+              "const": "article",
+              "default": "article"
+            }
+          ],
+          "type": "string",
+          "default": "website",
+          "title": "Type"
+        },
+        "image": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "description": "Recommended: 1200 x 630 px (up to 5MB)",
+          "title": "Image"
+        },
+        "favicon": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "description": "Recommended: 16 x 16 px",
+          "title": "Favicon"
+        },
+        "themeColor": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Suggested color that browsers should use to customize the display of the page or of the surrounding user interface",
+          "title": "Theme Color"
+        },
+        "canonical": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Canonical URL"
+        },
+        "noIndexNoFollow": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "title": "Disable indexing",
+          "description": "In testing, you can use this to prevent search engines from indexing your site"
+        },
+        "context": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@ProductDetailsPage|null|ProductListingPage|null",
+          "title": "Context"
+        }
+      },
+      "required": [],
+      "title": "deco-sites/std/components/seo/types.ts@Props"
+    },
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9zZW8vU0VPUERQLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "titleTemplate": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Title template",
+          "description": "add a %s whenever you want it to be replaced with the product name",
+          "default": "%s | Deco.cx"
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Page title override"
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Meta tag description override"
+        },
+        "favicon": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "description": "Recommended: 16 x 16 px",
+          "title": "Favicon"
+        },
+        "page": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@ProductDetailsPage|null",
+          "title": "Page"
+        },
+        "structuredData": {
+          "type": "object",
+          "properties": {
+            "useDataFromSEO": {
+              "type": [
+                "boolean",
+                "null"
+              ],
+              "title": "Use Data From S E O"
+            }
+          },
+          "required": [],
+          "title": "Structured Data"
+        }
+      },
+      "required": [
+        "page"
+      ],
+      "title": "deco-sites/std/components/seo/SEOPDP.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9zZW8vU0VPUExQLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "page": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@ProductListingPage|null",
+          "title": "Page"
+        },
+        "titleTemplate": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Title template",
+          "description": "add a %s whenever you want it to be replaced with the product name",
+          "default": "%s | Deco.cx"
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Page Title override"
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Metatag description override"
+        },
+        "favicon": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "description": "Recommended: 16 x 16 px",
+          "title": "Favicon"
+        }
+      },
+      "required": [
+        "page"
+      ],
+      "title": "deco-sites/std/components/seo/SEOPLP.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvVlRFWFBvcnRhbERhdGFMYXllckNvbXBhdGliaWxpdHkudHN4@LoaderProps": {
+      "type": "object",
+      "properties": {
+        "slug": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3JlcXVlc3RUb1BhcmFtLnRz@RequestURLParam",
+          "title": "Slug"
+        }
+      },
+      "required": [
+        "slug"
+      ],
+      "title": "deco-sites/std/sections/VTEXPortalDataLayerCompatibility.tsx@LoaderProps"
     },
     "ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvY29tcG9uZW50cy91aS9DYXRlZ29yeUJhbm5lci50c3g=@Banner": {
       "type": "object",
@@ -8337,6 +8648,243 @@
       },
       "required": [],
       "title": "deco-sites/treinamentohard/sections/Content/Benefits.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvQ29udGVudC9DYXJkU2VjdGlvbi50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "cards": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "icon": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "const": "ArrowsPointingOut",
+                    "default": "ArrowsPointingOut"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Bars3",
+                    "default": "Bars3"
+                  },
+                  {
+                    "type": "string",
+                    "const": "ChevronLeft",
+                    "default": "ChevronLeft"
+                  },
+                  {
+                    "type": "string",
+                    "const": "ChevronRight",
+                    "default": "ChevronRight"
+                  },
+                  {
+                    "type": "string",
+                    "const": "ChevronUp",
+                    "default": "ChevronUp"
+                  },
+                  {
+                    "type": "string",
+                    "const": "ChevronDown",
+                    "default": "ChevronDown"
+                  },
+                  {
+                    "type": "string",
+                    "const": "CreditCard",
+                    "default": "CreditCard"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Deco",
+                    "default": "Deco"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Diners",
+                    "default": "Diners"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Discord",
+                    "default": "Discord"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Discount",
+                    "default": "Discount"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Elo",
+                    "default": "Elo"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Facebook",
+                    "default": "Facebook"
+                  },
+                  {
+                    "type": "string",
+                    "const": "FilterList",
+                    "default": "FilterList"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Heart",
+                    "default": "Heart"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Instagram",
+                    "default": "Instagram"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Linkedin",
+                    "default": "Linkedin"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Minus",
+                    "default": "Minus"
+                  },
+                  {
+                    "type": "string",
+                    "const": "MapPin",
+                    "default": "MapPin"
+                  },
+                  {
+                    "type": "string",
+                    "const": "MagnifyingGlass",
+                    "default": "MagnifyingGlass"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Mastercard",
+                    "default": "Mastercard"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Message",
+                    "default": "Message"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Phone",
+                    "default": "Phone"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Pix",
+                    "default": "Pix"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Plus",
+                    "default": "Plus"
+                  },
+                  {
+                    "type": "string",
+                    "const": "QuestionMarkCircle",
+                    "default": "QuestionMarkCircle"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Return",
+                    "default": "Return"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Ruler",
+                    "default": "Ruler"
+                  },
+                  {
+                    "type": "string",
+                    "const": "ShoppingCart",
+                    "default": "ShoppingCart"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Star",
+                    "default": "Star"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Tiktok",
+                    "default": "Tiktok"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Trash",
+                    "default": "Trash"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Truck",
+                    "default": "Truck"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Twitter",
+                    "default": "Twitter"
+                  },
+                  {
+                    "type": "string",
+                    "const": "User",
+                    "default": "User"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Visa",
+                    "default": "Visa"
+                  },
+                  {
+                    "type": "string",
+                    "const": "WhatsApp",
+                    "default": "WhatsApp"
+                  },
+                  {
+                    "type": "string",
+                    "const": "XMark",
+                    "default": "XMark"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Zoom",
+                    "default": "Zoom"
+                  }
+                ],
+                "type": "string",
+                "title": "Icon"
+              },
+              "title": {
+                "type": "string",
+                "title": "Title"
+              },
+              "description": {
+                "type": "string",
+                "title": "Description"
+              }
+            },
+            "required": [
+              "icon",
+              "title",
+              "description"
+            ]
+          },
+          "title": "Cards"
+        }
+      },
+      "required": [
+        "title",
+        "cards"
+      ],
+      "title": "deco-sites/treinamentohard/sections/Content/CardSection.tsx@Props"
     },
     "ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvQ29udGVudC9GYXEudHN4@Question": {
       "type": "object",
@@ -9348,6 +9896,96 @@
         "alerts"
       ],
       "title": "deco-sites/treinamentohard/components/header/Header.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image|f4e2fa6a639dd0d858a2d18a5c9d2890": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image"
+        },
+        {
+          "type": "string"
+        }
+      ],
+      "title": "Image|f4e2fa6a639dd0d858a2d18a5c9d2890"
+    },
+    "ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvSGVhZGVyL1N1YkhlYWRlci50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "image": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image|f4e2fa6a639dd0d858a2d18a5c9d2890",
+              "title": "Link"
+            },
+            "alt": {
+              "type": "string",
+              "title": "Alt"
+            },
+            "width": {
+              "type": "number",
+              "title": "Width"
+            },
+            "height": {
+              "type": "number",
+              "title": "Height"
+            }
+          },
+          "required": [
+            "link",
+            "alt",
+            "width",
+            "height"
+          ],
+          "title": "Image"
+        },
+        "subtitle": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Subtitle"
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Title"
+        },
+        "buttonTitle": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Button Title"
+        },
+        "backgroundColor": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "bg-zinc-950",
+              "default": "bg-zinc-950"
+            },
+            {
+              "type": "string",
+              "const": "bg-red-500",
+              "default": "bg-red-500"
+            },
+            {
+              "type": "string",
+              "const": "bg-violet-800",
+              "default": "bg-violet-800"
+            }
+          ],
+          "type": "string",
+          "title": "Background Color"
+        }
+      },
+      "required": [
+        "image"
+      ],
+      "title": "deco-sites/treinamentohard/sections/Header/SubHeader.tsx@Props"
     },
     "ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvY29tcG9uZW50cy91aS9CYW5uZXJHcmlkLnRzeA==@Banner": {
       "type": "object",
@@ -11748,315 +12386,6 @@
       },
       "required": [],
       "title": "deco-sites/treinamentohard/sections/Theme/Theme.tsx@Props"
-    },
-    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9BbmFseXRpY3MudHN4@Props": {
-      "type": "object",
-      "properties": {
-        "trackingIds": {
-          "type": "array",
-          "items": {
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "description": "google tag manager container id. For more info: https://developers.google.com/tag-platform/tag-manager/web#standard_web_page_installation .",
-          "title": "Tracking Ids"
-        },
-        "googleAnalyticsIds": {
-          "type": "array",
-          "items": {
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "title": "GA Measurement Ids",
-          "label": "measurement id",
-          "description": "the google analytics property measurement id. For more info: https://support.google.com/analytics/answer/9539598"
-        },
-        "src": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "description": "custom url for serving google tag manager. Set either this url or the tracking id",
-          "title": "Src"
-        },
-        "dangerouslyRunOnMainThread": {
-          "type": [
-            "boolean",
-            "null"
-          ],
-          "description": "run GTM directly on the main thread, without Partytown. This is useful for debugging purposes. Default: false",
-          "title": "Dangerously Run On Main Thread"
-        }
-      },
-      "required": [],
-      "title": "deco-sites/std/components/Analytics.tsx@Props"
-    },
-    "ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL2NsaWVudC50cw==@Locale": {
-      "type": "object",
-      "properties": {
-        "label": {
-          "type": "string",
-          "title": "Locale"
-        },
-        "authToken": {
-          "type": "string",
-          "title": "Auth Token"
-        }
-      },
-      "required": [
-        "label",
-        "authToken"
-      ],
-      "title": "Locale"
-    },
-    "ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL2NsaWVudC50cw==@Locale[]": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL2NsaWVudC50cw==@Locale"
-      },
-      "title": "Locale[]"
-    },
-    "ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL2NsaWVudC50cw==@ConfigButterCMS": {
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1jeC9kZWNvL2Jsb2Nrcy9hY2NvdW50LnRz@Account"
-        }
-      ],
-      "properties": {
-        "locales": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL2NsaWVudC50cw==@Locale[]",
-          "title": "Locales"
-        },
-        "defaultLocale": {
-          "type": "string",
-          "description": "Default value: en-us",
-          "default": "en-us",
-          "title": "Default Locale"
-        },
-        "apiVersion": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "description": "Default value: v2",
-          "default": "v2",
-          "title": "Api Version"
-        }
-      },
-      "required": [
-        "locales",
-        "defaultLocale"
-      ],
-      "title": "deco-sites/std/commerce/butterCMS/client.ts@ConfigButterCMS"
-    },
-    "ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@ProductDetailsPage|null|ProductListingPage|null": {
-      "anyOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@ProductDetailsPage|null"
-        },
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@ProductListingPage|null"
-        }
-      ],
-      "title": "ProductDetailsPage|null|ProductListingPage|null"
-    },
-    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9zZW8vdHlwZXMudHM=@Props": {
-      "type": "object",
-      "properties": {
-        "title": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Title"
-        },
-        "titleTemplate": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Title template",
-          "description": "add a %s whenever you want it to be replaced with the category name or search term",
-          "default": "%s | Deco.cx"
-        },
-        "description": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Description"
-        },
-        "type": {
-          "anyOf": [
-            {
-              "type": "string",
-              "const": "website",
-              "default": "website"
-            },
-            {
-              "type": "string",
-              "const": "article",
-              "default": "article"
-            }
-          ],
-          "type": "string",
-          "default": "website",
-          "title": "Type"
-        },
-        "image": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
-          "description": "Recommended: 1200 x 630 px (up to 5MB)",
-          "title": "Image"
-        },
-        "favicon": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
-          "description": "Recommended: 16 x 16 px",
-          "title": "Favicon"
-        },
-        "themeColor": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "description": "Suggested color that browsers should use to customize the display of the page or of the surrounding user interface",
-          "title": "Theme Color"
-        },
-        "canonical": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Canonical URL"
-        },
-        "noIndexNoFollow": {
-          "type": [
-            "boolean",
-            "null"
-          ],
-          "title": "Disable indexing",
-          "description": "In testing, you can use this to prevent search engines from indexing your site"
-        },
-        "context": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@ProductDetailsPage|null|ProductListingPage|null",
-          "title": "Context"
-        }
-      },
-      "required": [],
-      "title": "deco-sites/std/components/seo/types.ts@Props"
-    },
-    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9zZW8vU0VPUERQLnRzeA==@Props": {
-      "type": "object",
-      "properties": {
-        "titleTemplate": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Title template",
-          "description": "add a %s whenever you want it to be replaced with the product name",
-          "default": "%s | Deco.cx"
-        },
-        "title": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Page title override"
-        },
-        "description": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Meta tag description override"
-        },
-        "favicon": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
-          "description": "Recommended: 16 x 16 px",
-          "title": "Favicon"
-        },
-        "page": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@ProductDetailsPage|null",
-          "title": "Page"
-        },
-        "structuredData": {
-          "type": "object",
-          "properties": {
-            "useDataFromSEO": {
-              "type": [
-                "boolean",
-                "null"
-              ],
-              "title": "Use Data From S E O"
-            }
-          },
-          "required": [],
-          "title": "Structured Data"
-        }
-      },
-      "required": [
-        "page"
-      ],
-      "title": "deco-sites/std/components/seo/SEOPDP.tsx@Props"
-    },
-    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9zZW8vU0VPUExQLnRzeA==@Props": {
-      "type": "object",
-      "properties": {
-        "page": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@ProductListingPage|null",
-          "title": "Page"
-        },
-        "titleTemplate": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Title template",
-          "description": "add a %s whenever you want it to be replaced with the product name",
-          "default": "%s | Deco.cx"
-        },
-        "title": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Page Title override"
-        },
-        "description": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Metatag description override"
-        },
-        "favicon": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
-          "description": "Recommended: 16 x 16 px",
-          "title": "Favicon"
-        }
-      },
-      "required": [
-        "page"
-      ],
-      "title": "deco-sites/std/components/seo/SEOPLP.tsx@Props"
-    },
-    "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvVlRFWFBvcnRhbERhdGFMYXllckNvbXBhdGliaWxpdHkudHN4@LoaderProps": {
-      "type": "object",
-      "properties": {
-        "slug": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3JlcXVlc3RUb1BhcmFtLnRz@RequestURLParam",
-          "title": "Slug"
-        }
-      },
-      "required": [
-        "slug"
-      ],
-      "title": "deco-sites/std/sections/VTEXPortalDataLayerCompatibility.tsx@LoaderProps"
     },
     "ZGVjby1jeC9kZWNvL21hdGNoZXJzL01hdGNoQ3Jvbi50cw==@CronProps": {
       "type": "object",
@@ -14540,6 +14869,237 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvQW5hbHl0aWNzLnRzeA==": {
+      "title": "deco-sites/std/sections/Analytics.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9BbmFseXRpY3MudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/std/sections/Analytics.tsx"
+          ],
+          "default": "deco-sites/std/sections/Analytics.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvY29uZmlnQnV0dGVyQ01TLmdsb2JhbC50c3g=": {
+      "title": "deco-sites/std/sections/configButterCMS.global.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL2NsaWVudC50cw==@ConfigButterCMS"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/std/sections/configButterCMS.global.tsx"
+          ],
+          "default": "deco-sites/std/sections/configButterCMS.global.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvY29uZmlnTnV2ZW1TaG9wLnRzeA==": {
+      "title": "deco-sites/std/sections/configNuvemShop.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvbnV2ZW1TaG9wL3R5cGVzLnRz@Account"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/std/sections/configNuvemShop.tsx"
+          ],
+          "default": "deco-sites/std/sections/configNuvemShop.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvY29uZmlnT0NDLmdsb2JhbC50c3g=": {
+      "title": "deco-sites/std/sections/configOCC.global.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2Uvb2NjL2NsaWVudC50cw==@ConfigOCC"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/std/sections/configOCC.global.tsx"
+          ],
+          "default": "deco-sites/std/sections/configOCC.global.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvY29uZmlnU2hvcGlmeS5nbG9iYWwudHN4": {
+      "title": "deco-sites/std/sections/configShopify.global.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2Uvc2hvcGlmeS9jbGllbnQudHM=@ConfigShopify"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/std/sections/configShopify.global.tsx"
+          ],
+          "default": "deco-sites/std/sections/configShopify.global.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvY29uZmlnVlRFWC5nbG9iYWwudHN4": {
+      "title": "deco-sites/std/sections/configVTEX.global.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvcGFja3MvdnRleC9hY2NvdW50cy92dGV4LnRz@Account"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/std/sections/configVTEX.global.tsx"
+          ],
+          "default": "deco-sites/std/sections/configVTEX.global.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvY29uZmlnWW91clZpZXdzLmdsb2JhbC50c3g=": {
+      "title": "deco-sites/std/sections/configYourViews.global.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UveW91clZpZXdzL2NsaWVudC50cw==@ConfigYourViews"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/std/sections/configYourViews.global.tsx"
+          ],
+          "default": "deco-sites/std/sections/configYourViews.global.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvU0VPLnRzeA==": {
+      "title": "deco-sites/std/sections/SEO.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9zZW8vdHlwZXMudHM=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/std/sections/SEO.tsx"
+          ],
+          "default": "deco-sites/std/sections/SEO.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvU0VPUERQLnRzeA==": {
+      "title": "deco-sites/std/sections/SEOPDP.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9zZW8vU0VPUERQLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/std/sections/SEOPDP.tsx"
+          ],
+          "default": "deco-sites/std/sections/SEOPDP.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvU0VPUExQLnRzeA==": {
+      "title": "deco-sites/std/sections/SEOPLP.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9zZW8vU0VPUExQLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/std/sections/SEOPLP.tsx"
+          ],
+          "default": "deco-sites/std/sections/SEOPLP.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvVlRFWFBvcnRhbERhdGFMYXllckNvbXBhdGliaWxpdHkudHN4": {
+      "title": "deco-sites/std/sections/VTEXPortalDataLayerCompatibility.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvVlRFWFBvcnRhbERhdGFMYXllckNvbXBhdGliaWxpdHkudHN4@LoaderProps"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/std/sections/VTEXPortalDataLayerCompatibility.tsx"
+          ],
+          "default": "deco-sites/std/sections/VTEXPortalDataLayerCompatibility.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvQ2F0ZWdvcnkvQ2F0ZWdvcnlCYW5uZXIudHN4": {
       "title": "deco-sites/treinamentohard/sections/Category/CategoryBanner.tsx",
       "type": "object",
@@ -14600,6 +15160,27 @@
             "deco-sites/treinamentohard/sections/Content/Benefits.tsx"
           ],
           "default": "deco-sites/treinamentohard/sections/Content/Benefits.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvQ29udGVudC9DYXJkU2VjdGlvbi50c3g=": {
+      "title": "deco-sites/treinamentohard/sections/Content/CardSection.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvQ29udGVudC9DYXJkU2VjdGlvbi50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/treinamentohard/sections/Content/CardSection.tsx"
+          ],
+          "default": "deco-sites/treinamentohard/sections/Content/CardSection.tsx"
         }
       }
     },
@@ -14705,6 +15286,27 @@
             "deco-sites/treinamentohard/sections/Header/Header.tsx"
           ],
           "default": "deco-sites/treinamentohard/sections/Header/Header.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvSGVhZGVyL1N1YkhlYWRlci50c3g=": {
+      "title": "deco-sites/treinamentohard/sections/Header/SubHeader.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvSGVhZGVyL1N1YkhlYWRlci50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/treinamentohard/sections/Header/SubHeader.tsx"
+          ],
+          "default": "deco-sites/treinamentohard/sections/Header/SubHeader.tsx"
         }
       }
     },
@@ -15041,237 +15643,6 @@
             "deco-sites/treinamentohard/sections/Theme/Theme.tsx"
           ],
           "default": "deco-sites/treinamentohard/sections/Theme/Theme.tsx"
-        }
-      }
-    },
-    "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvQW5hbHl0aWNzLnRzeA==": {
-      "title": "deco-sites/std/sections/Analytics.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9BbmFseXRpY3MudHN4@Props"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/std/sections/Analytics.tsx"
-          ],
-          "default": "deco-sites/std/sections/Analytics.tsx"
-        }
-      }
-    },
-    "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvY29uZmlnQnV0dGVyQ01TLmdsb2JhbC50c3g=": {
-      "title": "deco-sites/std/sections/configButterCMS.global.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL2NsaWVudC50cw==@ConfigButterCMS"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/std/sections/configButterCMS.global.tsx"
-          ],
-          "default": "deco-sites/std/sections/configButterCMS.global.tsx"
-        }
-      }
-    },
-    "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvY29uZmlnTnV2ZW1TaG9wLnRzeA==": {
-      "title": "deco-sites/std/sections/configNuvemShop.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvbnV2ZW1TaG9wL3R5cGVzLnRz@Account"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/std/sections/configNuvemShop.tsx"
-          ],
-          "default": "deco-sites/std/sections/configNuvemShop.tsx"
-        }
-      }
-    },
-    "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvY29uZmlnT0NDLmdsb2JhbC50c3g=": {
-      "title": "deco-sites/std/sections/configOCC.global.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2Uvb2NjL2NsaWVudC50cw==@ConfigOCC"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/std/sections/configOCC.global.tsx"
-          ],
-          "default": "deco-sites/std/sections/configOCC.global.tsx"
-        }
-      }
-    },
-    "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvY29uZmlnU2hvcGlmeS5nbG9iYWwudHN4": {
-      "title": "deco-sites/std/sections/configShopify.global.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2Uvc2hvcGlmeS9jbGllbnQudHM=@ConfigShopify"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/std/sections/configShopify.global.tsx"
-          ],
-          "default": "deco-sites/std/sections/configShopify.global.tsx"
-        }
-      }
-    },
-    "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvY29uZmlnVlRFWC5nbG9iYWwudHN4": {
-      "title": "deco-sites/std/sections/configVTEX.global.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvcGFja3MvdnRleC9hY2NvdW50cy92dGV4LnRz@Account"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/std/sections/configVTEX.global.tsx"
-          ],
-          "default": "deco-sites/std/sections/configVTEX.global.tsx"
-        }
-      }
-    },
-    "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvY29uZmlnWW91clZpZXdzLmdsb2JhbC50c3g=": {
-      "title": "deco-sites/std/sections/configYourViews.global.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UveW91clZpZXdzL2NsaWVudC50cw==@ConfigYourViews"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/std/sections/configYourViews.global.tsx"
-          ],
-          "default": "deco-sites/std/sections/configYourViews.global.tsx"
-        }
-      }
-    },
-    "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvU0VPLnRzeA==": {
-      "title": "deco-sites/std/sections/SEO.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9zZW8vdHlwZXMudHM=@Props"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/std/sections/SEO.tsx"
-          ],
-          "default": "deco-sites/std/sections/SEO.tsx"
-        }
-      }
-    },
-    "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvU0VPUERQLnRzeA==": {
-      "title": "deco-sites/std/sections/SEOPDP.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9zZW8vU0VPUERQLnRzeA==@Props"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/std/sections/SEOPDP.tsx"
-          ],
-          "default": "deco-sites/std/sections/SEOPDP.tsx"
-        }
-      }
-    },
-    "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvU0VPUExQLnRzeA==": {
-      "title": "deco-sites/std/sections/SEOPLP.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9zZW8vU0VPUExQLnRzeA==@Props"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/std/sections/SEOPLP.tsx"
-          ],
-          "default": "deco-sites/std/sections/SEOPLP.tsx"
-        }
-      }
-    },
-    "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvVlRFWFBvcnRhbERhdGFMYXllckNvbXBhdGliaWxpdHkudHN4": {
-      "title": "deco-sites/std/sections/VTEXPortalDataLayerCompatibility.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvVlRFWFBvcnRhbERhdGFMYXllckNvbXBhdGliaWxpdHkudHN4@LoaderProps"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/std/sections/VTEXPortalDataLayerCompatibility.tsx"
-          ],
-          "default": "deco-sites/std/sections/VTEXPortalDataLayerCompatibility.tsx"
         }
       }
     },
@@ -16304,6 +16675,39 @@
           "$ref": "#/definitions/JGxpdmUvc2VjdGlvbnMvVXNlU2xvdC50c3g="
         },
         {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvQW5hbHl0aWNzLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvY29uZmlnQnV0dGVyQ01TLmdsb2JhbC50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvY29uZmlnTnV2ZW1TaG9wLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvY29uZmlnT0NDLmdsb2JhbC50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvY29uZmlnU2hvcGlmeS5nbG9iYWwudHN4"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvY29uZmlnVlRFWC5nbG9iYWwudHN4"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvY29uZmlnWW91clZpZXdzLmdsb2JhbC50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvU0VPLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvU0VPUERQLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvU0VPUExQLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvVlRFWFBvcnRhbERhdGFMYXllckNvbXBhdGliaWxpdHkudHN4"
+        },
+        {
           "$ref": "#/definitions/ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvQ2F0ZWdvcnkvQ2F0ZWdvcnlCYW5uZXIudHN4"
         },
         {
@@ -16311,6 +16715,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvQ29udGVudC9CZW5lZml0cy50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvQ29udGVudC9DYXJkU2VjdGlvbi50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvQ29udGVudC9GYXEudHN4"
@@ -16326,6 +16733,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvSGVhZGVyL0hlYWRlci50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvSGVhZGVyL1N1YkhlYWRlci50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvSW1hZ2VzL0Jhbm5lckdyaWQudHN4"
@@ -16374,39 +16784,6 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvVGhlbWUvVGhlbWUudHN4"
-        },
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvQW5hbHl0aWNzLnRzeA=="
-        },
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvY29uZmlnQnV0dGVyQ01TLmdsb2JhbC50c3g="
-        },
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvY29uZmlnTnV2ZW1TaG9wLnRzeA=="
-        },
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvY29uZmlnT0NDLmdsb2JhbC50c3g="
-        },
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvY29uZmlnU2hvcGlmeS5nbG9iYWwudHN4"
-        },
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvY29uZmlnVlRFWC5nbG9iYWwudHN4"
-        },
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvY29uZmlnWW91clZpZXdzLmdsb2JhbC50c3g="
-        },
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvU0VPLnRzeA=="
-        },
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvU0VPUERQLnRzeA=="
-        },
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvU0VPUExQLnRzeA=="
-        },
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvVlRFWFBvcnRhbERhdGFMYXllckNvbXBhdGliaWxpdHkudHN4"
         }
       ]
     },
