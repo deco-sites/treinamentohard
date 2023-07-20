@@ -107,9 +107,11 @@
               "deco-sites/treinamentohard/sections/Content/CardSection.tsx",
               "deco-sites/treinamentohard/sections/Content/Faq.tsx",
               "deco-sites/treinamentohard/sections/Content/Logos.tsx",
+              "deco-sites/treinamentohard/sections/Content/LogoSection.tsx",
               "deco-sites/treinamentohard/sections/Content/Testimonials.tsx",
               "deco-sites/treinamentohard/sections/Footer/Footer.tsx",
               "deco-sites/treinamentohard/sections/Header/Header.tsx",
+              "deco-sites/treinamentohard/sections/Header/HeaderTeste.tsx",
               "deco-sites/treinamentohard/sections/Header/SubHeader.tsx",
               "deco-sites/treinamentohard/sections/Images/BannerGrid.tsx",
               "deco-sites/treinamentohard/sections/Images/Carousel.tsx",
@@ -9098,6 +9100,46 @@
       "required": [],
       "title": "deco-sites/treinamentohard/sections/Content/Logos.tsx@Props"
     },
+    "ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvQ29udGVudC9Mb2dvU2VjdGlvbi50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "images": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "link": {
+                "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+                "title": "Link"
+              },
+              "alt": {
+                "type": "string",
+                "title": "Alt"
+              },
+              "width": {
+                "type": "number",
+                "title": "Width"
+              },
+              "height": {
+                "type": "number",
+                "title": "Height"
+              }
+            },
+            "required": [
+              "link",
+              "alt",
+              "width",
+              "height"
+            ]
+          },
+          "title": "Images"
+        }
+      },
+      "required": [
+        "images"
+      ],
+      "title": "deco-sites/treinamentohard/sections/Content/LogoSection.tsx@Props"
+    },
     "ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvQ29udGVudC9UZXN0aW1vbmlhbHMudHN4@Testimonial": {
       "type": "object",
       "properties": {
@@ -9896,6 +9938,445 @@
         "alerts"
       ],
       "title": "deco-sites/treinamentohard/components/header/Header.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvSGVhZGVyL0hlYWRlclRlc3RlLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Name"
+        },
+        "iconleft": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "ArrowsPointingOut",
+              "default": "ArrowsPointingOut"
+            },
+            {
+              "type": "string",
+              "const": "Bars3",
+              "default": "Bars3"
+            },
+            {
+              "type": "string",
+              "const": "ChevronLeft",
+              "default": "ChevronLeft"
+            },
+            {
+              "type": "string",
+              "const": "ChevronRight",
+              "default": "ChevronRight"
+            },
+            {
+              "type": "string",
+              "const": "ChevronUp",
+              "default": "ChevronUp"
+            },
+            {
+              "type": "string",
+              "const": "ChevronDown",
+              "default": "ChevronDown"
+            },
+            {
+              "type": "string",
+              "const": "CreditCard",
+              "default": "CreditCard"
+            },
+            {
+              "type": "string",
+              "const": "Deco",
+              "default": "Deco"
+            },
+            {
+              "type": "string",
+              "const": "Diners",
+              "default": "Diners"
+            },
+            {
+              "type": "string",
+              "const": "Discord",
+              "default": "Discord"
+            },
+            {
+              "type": "string",
+              "const": "Discount",
+              "default": "Discount"
+            },
+            {
+              "type": "string",
+              "const": "Elo",
+              "default": "Elo"
+            },
+            {
+              "type": "string",
+              "const": "Facebook",
+              "default": "Facebook"
+            },
+            {
+              "type": "string",
+              "const": "FilterList",
+              "default": "FilterList"
+            },
+            {
+              "type": "string",
+              "const": "Heart",
+              "default": "Heart"
+            },
+            {
+              "type": "string",
+              "const": "Instagram",
+              "default": "Instagram"
+            },
+            {
+              "type": "string",
+              "const": "Linkedin",
+              "default": "Linkedin"
+            },
+            {
+              "type": "string",
+              "const": "Minus",
+              "default": "Minus"
+            },
+            {
+              "type": "string",
+              "const": "MapPin",
+              "default": "MapPin"
+            },
+            {
+              "type": "string",
+              "const": "MagnifyingGlass",
+              "default": "MagnifyingGlass"
+            },
+            {
+              "type": "string",
+              "const": "Mastercard",
+              "default": "Mastercard"
+            },
+            {
+              "type": "string",
+              "const": "Message",
+              "default": "Message"
+            },
+            {
+              "type": "string",
+              "const": "Phone",
+              "default": "Phone"
+            },
+            {
+              "type": "string",
+              "const": "Pix",
+              "default": "Pix"
+            },
+            {
+              "type": "string",
+              "const": "Plus",
+              "default": "Plus"
+            },
+            {
+              "type": "string",
+              "const": "QuestionMarkCircle",
+              "default": "QuestionMarkCircle"
+            },
+            {
+              "type": "string",
+              "const": "Return",
+              "default": "Return"
+            },
+            {
+              "type": "string",
+              "const": "Ruler",
+              "default": "Ruler"
+            },
+            {
+              "type": "string",
+              "const": "ShoppingCart",
+              "default": "ShoppingCart"
+            },
+            {
+              "type": "string",
+              "const": "Star",
+              "default": "Star"
+            },
+            {
+              "type": "string",
+              "const": "Tiktok",
+              "default": "Tiktok"
+            },
+            {
+              "type": "string",
+              "const": "Trash",
+              "default": "Trash"
+            },
+            {
+              "type": "string",
+              "const": "Truck",
+              "default": "Truck"
+            },
+            {
+              "type": "string",
+              "const": "Twitter",
+              "default": "Twitter"
+            },
+            {
+              "type": "string",
+              "const": "User",
+              "default": "User"
+            },
+            {
+              "type": "string",
+              "const": "Visa",
+              "default": "Visa"
+            },
+            {
+              "type": "string",
+              "const": "WhatsApp",
+              "default": "WhatsApp"
+            },
+            {
+              "type": "string",
+              "const": "XMark",
+              "default": "XMark"
+            },
+            {
+              "type": "string",
+              "const": "Zoom",
+              "default": "Zoom"
+            }
+          ],
+          "type": "string",
+          "title": "Iconleft"
+        },
+        "iconright": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "ArrowsPointingOut",
+              "default": "ArrowsPointingOut"
+            },
+            {
+              "type": "string",
+              "const": "Bars3",
+              "default": "Bars3"
+            },
+            {
+              "type": "string",
+              "const": "ChevronLeft",
+              "default": "ChevronLeft"
+            },
+            {
+              "type": "string",
+              "const": "ChevronRight",
+              "default": "ChevronRight"
+            },
+            {
+              "type": "string",
+              "const": "ChevronUp",
+              "default": "ChevronUp"
+            },
+            {
+              "type": "string",
+              "const": "ChevronDown",
+              "default": "ChevronDown"
+            },
+            {
+              "type": "string",
+              "const": "CreditCard",
+              "default": "CreditCard"
+            },
+            {
+              "type": "string",
+              "const": "Deco",
+              "default": "Deco"
+            },
+            {
+              "type": "string",
+              "const": "Diners",
+              "default": "Diners"
+            },
+            {
+              "type": "string",
+              "const": "Discord",
+              "default": "Discord"
+            },
+            {
+              "type": "string",
+              "const": "Discount",
+              "default": "Discount"
+            },
+            {
+              "type": "string",
+              "const": "Elo",
+              "default": "Elo"
+            },
+            {
+              "type": "string",
+              "const": "Facebook",
+              "default": "Facebook"
+            },
+            {
+              "type": "string",
+              "const": "FilterList",
+              "default": "FilterList"
+            },
+            {
+              "type": "string",
+              "const": "Heart",
+              "default": "Heart"
+            },
+            {
+              "type": "string",
+              "const": "Instagram",
+              "default": "Instagram"
+            },
+            {
+              "type": "string",
+              "const": "Linkedin",
+              "default": "Linkedin"
+            },
+            {
+              "type": "string",
+              "const": "Minus",
+              "default": "Minus"
+            },
+            {
+              "type": "string",
+              "const": "MapPin",
+              "default": "MapPin"
+            },
+            {
+              "type": "string",
+              "const": "MagnifyingGlass",
+              "default": "MagnifyingGlass"
+            },
+            {
+              "type": "string",
+              "const": "Mastercard",
+              "default": "Mastercard"
+            },
+            {
+              "type": "string",
+              "const": "Message",
+              "default": "Message"
+            },
+            {
+              "type": "string",
+              "const": "Phone",
+              "default": "Phone"
+            },
+            {
+              "type": "string",
+              "const": "Pix",
+              "default": "Pix"
+            },
+            {
+              "type": "string",
+              "const": "Plus",
+              "default": "Plus"
+            },
+            {
+              "type": "string",
+              "const": "QuestionMarkCircle",
+              "default": "QuestionMarkCircle"
+            },
+            {
+              "type": "string",
+              "const": "Return",
+              "default": "Return"
+            },
+            {
+              "type": "string",
+              "const": "Ruler",
+              "default": "Ruler"
+            },
+            {
+              "type": "string",
+              "const": "ShoppingCart",
+              "default": "ShoppingCart"
+            },
+            {
+              "type": "string",
+              "const": "Star",
+              "default": "Star"
+            },
+            {
+              "type": "string",
+              "const": "Tiktok",
+              "default": "Tiktok"
+            },
+            {
+              "type": "string",
+              "const": "Trash",
+              "default": "Trash"
+            },
+            {
+              "type": "string",
+              "const": "Truck",
+              "default": "Truck"
+            },
+            {
+              "type": "string",
+              "const": "Twitter",
+              "default": "Twitter"
+            },
+            {
+              "type": "string",
+              "const": "User",
+              "default": "User"
+            },
+            {
+              "type": "string",
+              "const": "Visa",
+              "default": "Visa"
+            },
+            {
+              "type": "string",
+              "const": "WhatsApp",
+              "default": "WhatsApp"
+            },
+            {
+              "type": "string",
+              "const": "XMark",
+              "default": "XMark"
+            },
+            {
+              "type": "string",
+              "const": "Zoom",
+              "default": "Zoom"
+            }
+          ],
+          "type": "string",
+          "title": "Iconright"
+        },
+        "paths": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "title": "Name"
+              },
+              "href": {
+                "type": "string",
+                "title": "Href"
+              }
+            },
+            "required": [
+              "name",
+              "href"
+            ]
+          },
+          "title": "Paths"
+        }
+      },
+      "required": [
+        "paths"
+      ],
+      "title": "deco-sites/treinamentohard/sections/Header/HeaderTeste.tsx@Props"
     },
     "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image|f4e2fa6a639dd0d858a2d18a5c9d2890": {
       "anyOf": [
@@ -15226,6 +15707,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvQ29udGVudC9Mb2dvU2VjdGlvbi50c3g=": {
+      "title": "deco-sites/treinamentohard/sections/Content/LogoSection.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvQ29udGVudC9Mb2dvU2VjdGlvbi50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/treinamentohard/sections/Content/LogoSection.tsx"
+          ],
+          "default": "deco-sites/treinamentohard/sections/Content/LogoSection.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvQ29udGVudC9UZXN0aW1vbmlhbHMudHN4": {
       "title": "deco-sites/treinamentohard/sections/Content/Testimonials.tsx",
       "type": "object",
@@ -15286,6 +15788,27 @@
             "deco-sites/treinamentohard/sections/Header/Header.tsx"
           ],
           "default": "deco-sites/treinamentohard/sections/Header/Header.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvSGVhZGVyL0hlYWRlclRlc3RlLnRzeA==": {
+      "title": "deco-sites/treinamentohard/sections/Header/HeaderTeste.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvSGVhZGVyL0hlYWRlclRlc3RlLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/treinamentohard/sections/Header/HeaderTeste.tsx"
+          ],
+          "default": "deco-sites/treinamentohard/sections/Header/HeaderTeste.tsx"
         }
       }
     },
@@ -16726,6 +17249,9 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvQ29udGVudC9Mb2dvcy50c3g="
         },
         {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvQ29udGVudC9Mb2dvU2VjdGlvbi50c3g="
+        },
+        {
           "$ref": "#/definitions/ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvQ29udGVudC9UZXN0aW1vbmlhbHMudHN4"
         },
         {
@@ -16733,6 +17259,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvSGVhZGVyL0hlYWRlci50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvSGVhZGVyL0hlYWRlclRlc3RlLnRzeA=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy90cmVpbmFtZW50b2hhcmQvc2VjdGlvbnMvSGVhZGVyL1N1YkhlYWRlci50c3g="
