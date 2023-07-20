@@ -10,7 +10,9 @@ export interface Props {
   }>;
 }
 
-export default function TesteHeader({ name, iconleft, iconright, paths }: Props) {
+export default function TesteHeader(
+  { name, iconleft, iconright, paths }: Props,
+) {
   return (
     <div class="navbar fixed bg-zinc-900 z-50">
       <div class="navbar-start">
@@ -66,13 +68,25 @@ export default function TesteHeader({ name, iconleft, iconright, paths }: Props)
       <div class="navbar-end">
         <button class="btn btn-ghost btn-circle">
           {iconleft && (
-            <Icon id={iconleft} width={20} height={20} strokeWidth={3} class="text-white" />
+            <Icon
+              id={iconleft}
+              width={20}
+              height={20}
+              strokeWidth={3}
+              class="text-white"
+            />
           )}
         </button>
         <button class="btn btn-ghost btn-circle">
           <div class="indicator">
             {iconright && (
-              <Icon id={iconright} width={20} height={20} strokeWidth={3} class="text-white" />
+              <Icon
+                id={iconright}
+                width={20}
+                height={20}
+                strokeWidth={3}
+                class="text-white"
+              />
             )}
             <span class="badge badge-xs badge-primary indicator-item"></span>
           </div>
